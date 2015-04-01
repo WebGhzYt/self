@@ -1,0 +1,28 @@
+<% if !(signed_in?) %>
+<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+<li role="presentation">
+	<%= link_to "Sign_up", new_user_registration_path,class: "btn btn-primary" %>
+</li>
+<li role="presentation" class="divider">
+	<%= link_to "Login-with-Paypal", user_omniauth_authorize_path(:paypal),class: "btn btn-primary" %>
+</li>
+<li role="presentation">
+	<%= link_to "Login-with-facebook", user_omniauth_authorize_path(:facebook) , class: "btn btn-primary" %>
+</li>
+<li role="presentation">
+	<%= link_to "Login-with-Linkedin", user_omniauth_authorize_path(:linkedin),class: "btn btn-primary" %>
+</li>
+<li role="presentation">
+	<%= link_to "Login-with-Twitter", user_omniauth_authorize_path(:twitter),class: "btn btn-primary"%>
+</li>
+<li role="presentation" class="divider">
+	<%= link_to "Login-with-Google", user_omniauth_authorize_path(:google_oauth2),class: "btn btn-primary" %>
+</li>
+</ul>
+<% else %>
+	Hello,<%= current_user.email %><br>
+	You are login with <%= current_user.provider %>
+	<%= link_to "Logout", destroy_user_session_path , method: "delete", class: "btn btn-success" %>
+<% end %>
+<!-- <li role="presentation"></li> -->
+
