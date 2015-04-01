@@ -1,5 +1,6 @@
 <% if !(signed_in?) %>
-<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+<nav>
+  <ul class="nav navbar-nav navbar-right">
 <li role="presentation">
 	<%= link_to "Sign_up", new_user_registration_path,class: "btn btn-primary" %>
 </li>
@@ -25,4 +26,4 @@
 	<%= link_to "Logout", destroy_user_session_path , method: "delete", class: "btn btn-success" %>
 <% end %>
 <!-- <li role="presentation"></li> -->
-
+</nav>
