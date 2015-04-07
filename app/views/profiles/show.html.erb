@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <strong>Fatname:</strong>
+  <%= @profile.fatname %>
+</p>
+
+<p>
+  <strong>Motname:</strong>
+  <%= @profile.motname %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @profile.gender %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @profile.dob %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @profile.phone %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  
+  <%= image_tag @profile.image.url , height: '100', width: '100' %>
+</p>
+
+<%= link_to 'Update', edit_profile_path(@profile) %> |
+<%= link_to 'HOme', root_url %>

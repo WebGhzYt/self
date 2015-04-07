@@ -1,29 +1,139 @@
-<% if !(signed_in?) %>
-<nav>
-  <ul class="nav navbar-nav navbar-right">
-<li role="presentation">
-	<%= link_to "Sign_up", new_user_registration_path,class: "btn btn-primary" %>
-</li>
-<li role="presentation" class="divider">
-	<%= link_to "Login-with-Paypal", user_omniauth_authorize_path(:paypal),class: "btn btn-primary" %>
-</li>
-<li role="presentation">
-	<%= link_to "Login-with-facebook", user_omniauth_authorize_path(:facebook) , class: "btn btn-primary" %>
-</li>
-<li role="presentation">
-	<%= link_to "Login-with-Linkedin", user_omniauth_authorize_path(:linkedin),class: "btn btn-primary" %>
-</li>
-<li role="presentation">
-	<%= link_to "Login-with-Twitter", user_omniauth_authorize_path(:twitter),class: "btn btn-primary"%>
-</li>
-<li role="presentation" class="divider">
-	<%= link_to "Login-with-Google", user_omniauth_authorize_path(:google_oauth2),class: "btn btn-primary" %>
-</li>
-</ul>
-<% else %>
-	Hello,<%= current_user.email %><br>
-	You are login with <%= current_user.provider %>
-	<%= link_to "Logout", destroy_user_session_path , method: "delete", class: "btn btn-success" %>
-<% end %>
-<!-- <li role="presentation"></li> -->
+<% if !(signed_in?) %>    
+<div data-ride="carousel" class="carousel slide" id="myCarousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li class="" data-slide-to="0" data-target="#myCarousel"></li>
+        <li data-slide-to="1" data-target="#myCarousel" class=""></li>
+        <li data-slide-to="2" data-target="#myCarousel" class="active"></li>
+        <li data-slide-to="3" data-target="#myCarousel" class=""></li>
+        <li data-slide-to="4" data-target="#myCarousel" class=""></li>
+        <li data-slide-to="5" data-target="#myCarousel" class=""></li>
+        <li data-slide-to="6" data-target="#myCarousel" class=""></li>
+    </ol>
+    <div role="listbox" class="carousel-inner">
+        <div class="item active">
+           <%= image_tag("adver/a.jpeg",  :alt => "a feed", :class => "first-slide") %>
+       
+        </div>
+        <div class="item">
+              <%= image_tag("adver/b.png",  :alt => "b feed", :class => "second-slide") %>            
+        </div>
+        <div class="item">      
+          <%= image_tag("adver/c.jpeg",  :alt => "c feed", :class => "third-slide") %>            
+        </div>
+        <div class="item">      
+          <%= image_tag("adver/d.jpeg",  :alt => "d feed", :class => "fourth-slide") %>            
+        </div>
+        <div class="item">
+              <%= image_tag("adver/e.jpeg",  :alt => "e feed", :class => "first-slide") %>           
+        </div>
+        <div class="item">
+              <%= image_tag("adver/a.jpeg",  :alt => "f feed", :class => "first-slide") %>            
+        </div>
+        <div class="item">
+              <%= image_tag("adver/c.jpeg",  :alt => "g feed", :class => "first-slide") %>            
+        </div>
+    </div>
+    <a data-slide="prev" role="button" href="#myCarousel"
+        class="left carousel-control"> <span aria-hidden="true"
+        class="glyphicon glyphicon-chevron-left"></span> <span
+        class="sr-only">Previous</span>
+    </a> <a data-slide="next" role="button" href="#myCarousel"
+        class="right carousel-control"> <span aria-hidden="true"
+        class="glyphicon glyphicon-chevron-right"></span> <span
+        class="sr-only">Next</span>
+    </a>
+</div>
+
+  <nav id="main_login_option">
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active">
+      	<%= link_to "Login", new_user_session_path,class: "btn btn-primary" %>
+      </li>
+      <li role="presentation">
+      	<%= link_to "Sign_up", new_user_registration_path,class: "btn btn-primary" %>
+      </li>
+      <li role="presentation">
+      	<%= link_to "Login-with-Paypal", user_omniauth_authorize_path(:paypal),class: "btn btn-primary" %>
+      </li>
+      <li role="presentation">
+      	<%= link_to "Login-with-facebook", user_omniauth_authorize_path(:facebook) , class: "btn btn-primary" %>
+      </li>
+      <li role="presentation">
+      	<%= link_to "Login-with-Linkedin", user_omniauth_authorize_path(:linkedin),class: "btn btn-primary" %>
+      </li>
+      <li role="presentation">
+      	<%= link_to "Login-with-Twitter", user_omniauth_authorize_path(:twitter),class: "btn btn-primary"%>
+      </li>
+      <li role="presentation">
+      	<%= link_to "Login-with-Google", user_omniauth_authorize_path(:google_oauth2),class: "btn btn-primary" %>
+      </li>
+    </ul>
+
 </nav>
+
+
+
+
+
+
+<% else %>
+  	Hello,<%= current_user.email %><br><br>
+  	
+  	
+  	<!-- You are login with --> <%#= current_user.provider %>
+    Latest Posts
+
+
+    <div data-ride="carousel" class="carousel slide" id="myCarousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li class="" data-slide-to="0" data-target="#myCarousel"></li>
+        <li data-slide-to="1" data-target="#myCarousel" class=""></li>
+        <li data-slide-to="2" data-target="#myCarousel" class="active"></li>
+        <li data-slide-to="3" data-target="#myCarousel" class=""></li>
+        <li data-slide-to="4" data-target="#myCarousel" class=""></li>
+        <li data-slide-to="5" data-target="#myCarousel" class=""></li>
+        <li data-slide-to="6" data-target="#myCarousel" class=""></li>
+    </ol>
+    <div role="listbox" class="carousel-inner">
+        <div class="item active">            
+            <%= image_tag("img/1.jpeg",  :alt => "rss feed", :class => "first-slide") %>
+        </div>
+        <div class="item">
+        <%= image_tag("img/2.jpeg", :alt => "rss feed", :class => "second-slide") %>             
+        </div>
+        <div class="item">           
+          <%= image_tag("img/3.jpeg", :alt => "rss feed", :class => "third-slide") %> 
+        </div>
+        <div class="item">
+          <%= image_tag("img/4.jpeg", :alt => "rss feed", :class => "fourth-slide") %> 
+        </div>
+        <div class="item">
+          <%= image_tag("img/4.jpeg", :alt => "rss feed", :class => "first-slide") %> 
+        </div>
+        <div class="item">
+          <%= image_tag("img/2.jpeg", :alt => "rss feed", :class => "first-slide") %> 
+        </div>
+        <div class="item">
+          <%= image_tag("img/3.jpeg", :alt => "rss feed", :class => "first-slide") %> 
+        </div>
+        
+    </div>
+    <a data-slide="prev" role="button" href="#myCarousel"
+        class="left carousel-control"> <span aria-hidden="true"
+        class="glyphicon glyphicon-chevron-left"></span> <span
+        class="sr-only">Previous</span>
+    </a> <a data-slide="next" role="button" href="#myCarousel"
+        class="right carousel-control"> <span aria-hidden="true"
+        class="glyphicon glyphicon-chevron-right"></span> <span
+        class="sr-only">Next</span>
+    </a>
+</div>
+
+
+  	<%#= link_to 'Profile Update', edit_profile_path(current_user.profile.id) %>
+  	<%= link_to "Logout", destroy_user_session_path , method: "delete", class: "btn btn-success" %>
+    </nav>
+<% end %>
+

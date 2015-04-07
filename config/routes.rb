@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  get 'static_pages/help'
+
+  get 'static_pages/about'
+
+  get 'static_pages/privacy'
+
+  get 'static_pages/sitemap'
+
+  get 'static_pages/disclaimer'
+
+  get 'static_pages/everything'
+
+  resources :locations
+  resources :microposts
+  resources :profiles
   root 'welcome#index'
   # devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }

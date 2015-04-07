@@ -3,10 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'bootstrap-sass',       '3.2.0.0'
-
-
-
-
+gem "paperclip", "~> 4.2"
 gem 'pg'
 gem 'devise'
 gem 'omniauth'
@@ -17,6 +14,10 @@ gem 'omniauth-facebook'
 gem 'omniauth-linkedin' 
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
+
+gem 'open-weather'
+gem 'geocoder'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

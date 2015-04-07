@@ -54,4 +54,5 @@ config.action_mailer.default_url_options = { :host => 'localhost:3000' }
     authentication: "plain", 
     enable_starttls_auto: true
   }
+  # Paperclip.options[:command_path] = "/usr/local/bin/"
 end
