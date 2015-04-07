@@ -81,7 +81,7 @@
               My Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile Settings", profile_path(current_user) %></li>
+              <li><%= link_to "Profile Settings", profile_path(current_user.profile_id) %></li>
               <li><%= link_to "Account Settings", edit_user_registration_path(current_user) %></li>
               <li class="divider"></li>
               <li>
