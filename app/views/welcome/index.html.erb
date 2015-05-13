@@ -22,7 +22,7 @@ var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBe
     </ol>
     <div role="listbox" class="carousel-inner">
         <div class="item active">
-           <%= image_tag("adver/a.jpeg",  :alt => "a feed", :class => "first-slide") %>
+           <%= image_tag("adver/birtha.jpg",  :alt => "a feed", :class => "first-slide") %>
        
         </div>
         <div class="item">
@@ -64,39 +64,53 @@ var entry = document.getElementsByTagName('script')[0];entry.parentNode.insertBe
       	<%= link_to "Sign_up", new_user_registration_path,class: "btn btn-primary" %>
       </li>
       <li role="presentation">
-      	<%= link_to "Login-with-Paypal", user_omniauth_authorize_path(:paypal),class: "btn btn-primary" %>
+      	<%= link_to image_tag("adver/paypal.png"), user_omniauth_authorize_path(:paypal)%>
       </li>
       <li role="presentation">
-      	<%= link_to "Login-with-facebook", user_omniauth_authorize_path(:facebook) , class: "btn btn-primary" %>
+      	<%= link_to image_tag("adver/fb.png"), user_omniauth_authorize_path(:facebook)  %>
       </li>
       <li role="presentation">
-      	<%= link_to "Login-with-Linkedin", user_omniauth_authorize_path(:linkedin),class: "btn btn-primary" %>
+      	<%= link_to image_tag("adver/linkedin.png"),user_omniauth_authorize_path(:linkedin) %>
       </li>
       <li role="presentation">
-      	<%= link_to "Login-with-Twitter", user_omniauth_authorize_path(:twitter),class: "btn btn-primary"%>
+      	<%= link_to image_tag("adver/twittor.png"),user_omniauth_authorize_path(:twitter)%>
       </li>
       <li role="presentation">
-      	<%= link_to "Login-with-Google", user_omniauth_authorize_path(:google_oauth2),class: "btn btn-primary" %>
+      	<%= link_to image_tag("adver/gmail.png"), user_omniauth_authorize_path(:google_oauth2)%>
       </li>
     </ul>
 
-    <div>
-      <br>
-      This is Invation of "Birthday"<br>Most Welcome at out home address
-      <br>
-      <h1>
-      A year has passed, how time has flown
-We can’t believe how she’s grown!
-She’s really cute and so much fun.
-Our baby girl is turning ONE! </h1>
+    <div class="row">
+      <div class="col-md-1">Mithun</div>
+      <div class="col-md-1">Rohit</div>
+      <div class="col-md-1">Rahul</div>
+      <div class="col-md-1">Ankit</div>
+      <div class="col-md-1">Arpit</div>
+      <div class="col-md-1">Shubham</div>
     </div>
-    <div>
-      <address>
-        SE Jain Rohit,<br>
-        P.70,Majela Road,<br>
-        Madanganj-Kishagnarh<br>        
-      </address>
+
+    <div class="row">
+      <div class="col-md-8">development instructor and author of more than 12 party and activity books, including Baby Birthday Parties: 20 Fun Theme Parties for Babies 1 to 3, for ideas on hosting that first milestone party. "There's a lot to juggle—the unpredictable mood and schedule of a toddler, appropriate themes and snacks, even the number of guests." Her seven stress-free tips and theme ideas will have you and your bambino tossing your party hats into the air.</div>
+
+      <div class="col-md-4">development instructor and author of more than 12 party and activity books, including Baby Birthday Parties: 20 Fun Theme Parties for Babies 1 to 3, for ideas on hosting that first milestone party. "There's a lot to juggle—the unpredictable mood and schedule of a toddler, appropriate themes and snacks, even the number of guests." Her seven stress-free tips and theme ideas will have you and your bambino tossing your party hats into the air.</div>
     </div>
+    
+    <div class="row">
+      <div class="col-md-8">This is Invation of "Birthday"<br>Most Welcome at out home address</div>
+
+      <div class="col-md-4"><h1>
+            A year has passed, how time has flown
+      We can’t believe how she’s grown!
+      She’s really cute and so much fun.
+      Our baby girl is turning ONE! </h1>
+        <address>
+          SE Jain Rohit,<br>
+          P.70,Majela Road,<br>
+          Madanganj-Kishagnarh<br>        
+        </address>
+      </div>
+      </div>   
+      
 </nav>
 
 

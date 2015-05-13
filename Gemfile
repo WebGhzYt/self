@@ -14,7 +14,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-linkedin' 
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
-
 gem 'open-weather'
 gem 'geocoder'
 
